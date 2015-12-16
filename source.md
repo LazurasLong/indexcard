@@ -104,4 +104,3 @@ MONK
   - B: 5
   - E: 24
   - C: 12
-Drops: Girly Magazine
