@@ -1,4 +1,23 @@
-# Required for Building
+# IndexCard RPG
+
+Publications and sources for the IndexCard RPG.
+
+The in-progress/next version is kept in the root:
+
+  * `pandoc-template.tex`
+  * `somefont.ttf`
+  * `out.pdf`: An example output
+  * `source.md`: The only thing which is edited. The
+    master copy. This source is used to produce `out.pdf`
+    with `pandoc`, `somefont.ttf`, and `pandoc-template.tex`.
+
+These names are subject to change.
+
+Whenever there's an official release, `out.pdf` is generated,
+but renamed to something like `RELEASE-SEMVER.pdf` where `SEMVER`
+is the [semantic version](http://semver.org/) for that release.
+
+## Required for Building
 
 To build `source.md` to PDF you'll need `pandoc`.
 
