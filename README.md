@@ -4,7 +4,7 @@ Publications and sources for the IndexCard RPG.
 
 The in-progress/next version is kept in the root:
 
-  * `pandoc-template.tex`: Template used for generating `out.pdf`
+  * `pandoc-template.tex`: Template used for generating `out.pdf` (unfinished!)
   * `somefont.ttf`: Font used in `pandoc-template.tex`
   * `out.pdf`: An example output
   * `source.md`: The only thing which is edited. The
