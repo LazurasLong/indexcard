@@ -1,44 +1,62 @@
 # IndexCard RPG
 
-Minimal tabletop RPG rules which fit on 5x3 inch index cards.
+Tabletop RPG rules that fit on a single 5x3 inch index card.
 
-Materials required: paper, writing utensil, six-sided die.
+Materials required:
+
+  * paper
+  * writing utensil
+  * six-sided die.
 
 Please offer elegant summaries of these rules!
 
-## Core Card (core rules of gameplay)
+Lillian Lemmer, Catlin T
 
-Characters start with 3 HEARTS, 1 BAM, 1 EVADE, and fourteen points to distribute. Every point into HEARTS adds three HEARTS.
+## Core Ruleset
+
+Character starts with 5 HEARTS, 1 BAM, 1 EVADE, and 8 points
+to distribute; each point into HEARTS adds five HEARTS.
 
   1. Player with highest EVADE rolls first
-    * Roll 6: +2 BAM bonus
-    * Roll 5: +1 BAM bonus
+
+    * Roll 6: +2 BAM bonus, skip step 2
+    * Roll 5: +1 BAM bonus, skip step 2
     * Roll 1: miss
-  2. Defender rolls up to their EVADE times, if roll 6 don’t take damage
-  3. Defender loses HEARTS equal to attacker's BAM plus possible bonuses
-  4. Start at step #1, but rotate players in order of EVADE
+
+  2. Defender rolls up to their EVADE times,
+     if roll 6 skip step 3
+  3. Defender loses HEARTS equal to attacker's
+     BAM plus possible bonuses
+  4. Start at step #1, but rotate players
+     in order of EVADE
 
 Rules for creating supplement cards:
 
-  * Must fit on index card (5x3 inches)
-  * 8 point Courier New font
-  * List required supplements on top, e.g., `REQUIRED: Usable Items`
+  * Fits on index card (5x3 inches)
+  * 8 point Inconsolata Regular font
+  * List required supplements on top, e.g.,
+    `REQUIRED: Usable Items, Crazy Crits`
 
 ## Supplement Card: Usable Items
 
+Must announce which item used before rolling.
+
 Characters start with one item:
 
-  * CANDY: restore `ROLL * 3` `HEARTS`; do not attack
+  * CANDY: restore `ROLL * 2` `HEARTS`; do not attack
   * SODA: +ROLL BAM bonus; unevadable attack
-  * TOKEN: acts as a roll of 6; can attack
-  * MOLOTOV: Damage is 3x roll; unevadable
-  * THROWING STARS: Roll thrice, the total is unevadable damage.
 
-Must announce which item used *before* rolling.
+Untested:
+
+  * TOKEN: acts as a roll of 6; can attack
+  * MOLOTOV: Damage is 2x roll; unevadable
+  * THROWING STARS: Roll thrice, the total is unevadable damage.
 
 ## Supplement Card: Crazy Crits
 
-`crit` is a new stat. Each point invested in `crit` adds two points. `crit` starts at 2. Rolling six or five makes the total bonus BAM your `crit` value.
+  * New stat: `crit`, starts at 2
+  * Each point invested in `crit` adds two
+  * Rolling 6 or 5: the total BAM bonus is `crit` value
 
 ## Supplement Card: Novel
 
