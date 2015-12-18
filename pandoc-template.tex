@@ -1,15 +1,20 @@
-\documentclass[8pt,twocolumn,landscape]{article}
-
-\columnsep=0.2in
-
+\documentclass[4pt,twocolumn,landscape]{article}
 \usepackage{fontspec,geometry}
+\usepackage{enumitem}
+\setlist{noitemsep,nolistsep,leftmargin=1em,labelsep=0pt,topsep=0pt}
 
-\setmainfont{Inconsolata-Regular.ttf}
-
-\geometry{paperwidth=5in,paperheight=3in,tmargin=0.2in,
-          bmargin=0.2in,lmargin=0.2in,rmargin=0.2in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
 
 \def\tightlist{}
+\renewcommand{\section}{\clearpage\underline}
+\columnsep=2em
+
+\setmainfont{AnticSlab-Regular.ttf}
+\setsansfont{AnticSlab-Regular.ttf}
+\setmonofont{AnticSlab-Regular.ttf}
+\geometry{paperwidth=5in,paperheight=3in,tmargin=0.2in,
+  bmargin=0.2in,lmargin=0.2in,rmargin=0.2in}
 
 \begin{document}
 $body$
