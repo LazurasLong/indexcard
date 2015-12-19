@@ -1,7 +1,5 @@
 # IndexCard RPG
 
-*Lillian Lemmer & Catlin Thomas*
-
 Tabletop RPG rules that fit on a single 5x3 inch index card.
 
 5-20 minute playtime.
@@ -11,6 +9,12 @@ Materials required:
   * paper
   * writing utensil
   * six-sided die.
+
+**Lily Lemmer**: Concept and mother. Testing, LaTeX, source,
+software engineer.
+
+**Catlin Thomas**: Editor, testing, quality assurance,
+software engineer.
 
 # Core Ruleset
 
@@ -29,12 +33,11 @@ to distribute; point adds 3 to CRIT and 5 to HEARTS.
   4. Start at step #1, but rotate players
      in order of EVADE
 
-Rules for creating supplemental rulesets:
+Creating supplemental rulesets:
 
   * Fits on index card (5x3 inches)
-  * 8 point Inconsolata Regular font
   * List required supplements on top, e.g.,
-    *REQUIRED: Usable Items*
+    `REQUIRED: Usable Items`
 
 # Supplement Ruleset: Usable Items
 
@@ -58,23 +61,21 @@ Items for co-op only:
 
 `REQUIRES: Usable Items`
 
-A novel is a series of cards which have a scenario and options. Write the story, where each option may have `REQUIREMENTS` and `EVENTS`.
+Path cards have a scenario and options that either trigger
+`EVENTS` or lead to another (possibly random) path card.
 
-Option `REQUIREMENTS`:
+Options may have `REQUIREMENTS`:
 
-  * `USE x`: Item `x` is required for this option.
-  * `CHECK stat x FAIL y`: Option requires `stat` + `roll` to at least be `x`, else `FAIL` event `y`. Example: use for conversation, `"You're looking pretty!" CHECK HEARTS 20 FAIL BATTLE`
+  * `USE x`: Must have item `x`. Remove `x`
+  * `CHECK stat x FAIL y`: `stat` + `roll` must be at least `x`,
+    else `FAIL` event `y`.
 
-Option `EVENTS`:
+Option may trigger `EVENTS`:
 
-  * `OPEN`: Get item #ROLL from the chest on the back of this path card
-  * `BATTLE`: Battle monster on the back of this path card
-  * `NEXTCARD`: select random path card from this novel
+  * `OPEN`: Get item #ROLL from chest on back of path card
+  * `BATTLE`: Battle monster on back of path card
+  * `NEXTCARD`: select new path card
 
-Preface non-required things which require a supplement with `SUPPLEMENT supplement card name`.
-
-Use die roll to determine who the monster attacks.
-  
 # Path Card: Sleeping Ugly (Front)
 
 You are in a room with a slumbering troll, a locked door, and a treasure chest.

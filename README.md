@@ -13,6 +13,8 @@ The in-progress/next version is kept in the root:
 
 These names are subject to change.
 
+## Releases
+
 Whenever there's an official release, `out.pdf` is generated,
 but renamed to something like `RELEASE-SEMVER.pdf` where `SEMVER`
 is the [semantic version](http://semver.org/) for that release.
@@ -34,6 +36,8 @@ Command to build:
 pandoc --latex-engine=xelatex --template=./pandoc-template.tex \
        source.md -o out.pdf
 ```
+
+I personally have been building with `pandoc` 1.15.1.1.
 
 ## OSX
 
