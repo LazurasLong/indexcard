@@ -1,18 +1,45 @@
 \documentclass[4pt,twocolumn,landscape]{article}
 \usepackage{fontspec,geometry}
 \usepackage{enumitem}
+
+% Style titles. "explicit" allows us to explicitly
+% state where the section title is printed using #1
+% to denote the title
+%
+% http://ctan.org/pkg/titlesec
+\usepackage{titlesec}
+
+% remove margins/spacing from lists
 \setlist{noitemsep,nolistsep,leftmargin=1em,labelsep=0pt,topsep=0pt}
 
+% remove paragraph indent, add one line of spacing
+% between paragraphs
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
 
-\def\tightlist{}
-\renewcommand{\section}{\clearpage\underline}
 \columnsep=2em
 
-\setmainfont{AnticSlab-Regular.ttf}
-\setsansfont{AnticSlab-Regular.ttf}
+\def\tightlist{}
+
+% new page every section
+\let\stdsection\section
+\renewcommand\section{\clearpage\stdsection}
+
+% format headers
+\titleformat{\section}
+  {\normalfont\sffamily\Large\filcenter\bfseries\color{cyan}}
+  {}{0pt}{}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+
+% fonts
+\setmainfont[BoldFont={Merriweather-Bold.ttf},
+             ItalicFont={Merriweather-Italic.ttf},
+             BoldItalicFont={Merriweather-BoldItalic.ttf}]
+            {Merriweather-Regular.ttf}
+\setsansfont{MerriweatherSans-Regular.ttf}
 \setmonofont{AnticSlab-Regular.ttf}
+
+% page dimensions, margins
 \geometry{paperwidth=5in,paperheight=3in,tmargin=0.2in,
   bmargin=0.2in,lmargin=0.2in,rmargin=0.2in}
 

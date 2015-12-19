@@ -1,16 +1,16 @@
 # IndexCard RPG
 
+*Lillian Lemmer & Catlin Thomas*
+
 Tabletop RPG rules that fit on a single 5x3 inch index card.
+
+5-20 minute playtime.
 
 Materials required:
 
   * paper
   * writing utensil
   * six-sided die.
-
-Please offer elegant summaries of these rules!
-
-Lillian Lemmer, Catlin T
 
 # Core Ruleset
 
@@ -34,7 +34,7 @@ Rules for creating supplemental rulesets:
   * Fits on index card (5x3 inches)
   * 8 point Inconsolata Regular font
   * List required supplements on top, e.g.,
-    `REQUIRED: Usable Items`
+    *REQUIRED: Usable Items*
 
 # Supplement Ruleset: Usable Items
 
