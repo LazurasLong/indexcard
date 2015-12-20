@@ -18,20 +18,20 @@ software engineer.
 
 # Core Ruleset
 
-Start with: 10 HEARTS, 1 BAM, 1 EVADE, 3 CRIT, and 6 points
-to distribute; point adds 3 to CRIT and 5 to HEARTS.
+Start with: 20 `HEARTS`, 1 `BAM`, 1 `EVADE`, 4 `CRIT`, and 6 points
+to distribute; point adds 4 to `CRIT` and 5 to `HEARTS`.
 
   1. Player with highest EVADE rolls first
 
-    * Roll 6 or 5: +CRIT BAM bonus, skip step 2
+    * Roll 6 or 5: +`CRIT` `BAM` bonus, skip step 2
     * Roll 1: miss, skip to step 4
 
-  2. Defender rolls up to their EVADE times,
-     if roll 6 skip step 3
-  3. Defender loses HEARTS equal to attacker's
-     BAM plus possible bonuses
+  2. Defender rolls for every point in `EVADE`; if
+     roll 6 or 5, skip step 3
+  3. Defender loses `HEARTS` equal to attacker's
+     `BAM` plus possible bonuses
   4. Start at step #1, but rotate players
-     in order of EVADE
+     in order of `EVADE`
 
 Creating supplemental rulesets:
 
@@ -39,7 +39,7 @@ Creating supplemental rulesets:
   * List required supplements on top, e.g.,
     `REQUIRED: Usable Items`
 
-# Supplement Ruleset: Usable Items
+# Usable Items
 
 Must announce which item used before rolling.
 
@@ -57,7 +57,7 @@ Items for co-op only:
   * MOLOTOV: Damage is 2x roll; unevadable
   * THROWING STARS: Roll thrice, the total is unevadable damage.
 
-# Supplement Ruleset: Path Cards
+# Path Cards
 
 `REQUIRES: Usable Items`
 
@@ -75,6 +75,17 @@ Option may trigger `EVENTS`:
   * `OPEN`: Get item #ROLL from chest on back of path card
   * `BATTLE`: Battle monster on back of path card
   * `NEXTCARD`: select new path card
+
+# Weird Happenings
+
+If you notice everyone's HP is the same, point it out
+and everyone else takes `ROLL` damage.
+
+If you roll two-of-a-kind when evading, recover the matched
+number in `HEART`.
+
+If you can guess the roll before using an item, you don't
+dispose the item after use.
 
 # Path Card: Sleeping Ugly (Front)
 
