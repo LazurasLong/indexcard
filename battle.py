@@ -4,14 +4,14 @@ from operator import attrgetter
 
 
 class Character(object):
-    POINTS_TO_DISTRIBUTE = 6
-    HEART_POINT_MULTIPLIER = 5
-    CRIT_POINT_MULTIPLIER = 6
+    POINTS_TO_DISTRIBUTE = 4
+    HEART_POINT_MULTIPLIER = 1
+    CRIT_POINT_MULTIPLIER = 5
 
-    START_HEART = 20
+    START_HEART = 5
     START_BAM = 1
     START_EVADE = 1
-    START_CRIT = 6
+    START_CRIT = 1
 
     def __init__(self, name, heart, bam, evade, crit):
         self.name = name
@@ -150,11 +150,13 @@ class BattleRecord(object):
 
 class Battle(object):
     # could be [6]
-    CRIT_ON = [6]
+    CRIT_ON = [5, 6]
     EVADE_ON = [6]
 
     # could be 0
     MISS_ON = [1]
+
+    CRITS_SKIP_EVADE = False
 
     def __init__(self, *characters):
         characters = list(characters)
@@ -196,7 +198,7 @@ class Battle(object):
                     total_damage += character.crit
                     character_record.total_crits += 1
                     character_record.total_crit_damage += total_damage
-                    skip_evade_roll = True
+                    skip_evade_roll = self.CRITS_SKIP_EVADE
 
                 elif roll in self.MISS_ON:
                     # record miss
@@ -229,12 +231,12 @@ class Battle(object):
 
 if __name__ == "__main__":
     well_rounded = Character.from_points("well rounded",
-                                         into_heart=3, into_bam=1,
+                                         into_heart=1, into_bam=1,
                                          into_evade=1, into_crit=1)
-    all_crits = Character.from_points("all crits", into_crit=6)
-    all_bam = Character.from_points("all bam", into_bam=6)
-    all_evade = Character.from_points("all evade", into_evade=6)
-    all_heart = Character.from_points("all heart", into_heart=6)
+    all_crits = Character.from_points("all crits", into_crit=4)
+    all_bam = Character.from_points("all bam", into_bam=4)
+    all_evade = Character.from_points("all evade", into_evade=4)
+    all_heart = Character.from_points("all heart", into_heart=4)
     battle = Battle(well_rounded, all_crits, all_bam, all_evade, all_heart)
 
     while True:
