@@ -1,5 +1,7 @@
 import random
 
+from operator import attrgetter
+
 
 class Character(object):
     POINTS_TO_DISTRIBUTE = 6
@@ -131,6 +133,16 @@ class BattleRecord(object):
             yield character
 
     def print_records(self):
+        records = self._character_records.values()
+
+        for record in ("kills", "deaths", "total_crits", "total_crit_damage",
+                       "total_damage", "total_misses"):
+
+            character = max(records, key=attrgetter(record)).name
+
+            print("Most %s: %s" % (record, character))
+
+        print()
 
         for character_record in self._character_records.values():
             print(character_record.name)
@@ -236,7 +248,7 @@ if __name__ == "__main__":
     while True:
 
         try:
-            times = input("Run this battle how many times?")
+            times = input("Run this battle how many times?\n> ")
             times = int(times)
 
             break
