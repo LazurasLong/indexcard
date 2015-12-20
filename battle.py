@@ -6,12 +6,12 @@ from operator import attrgetter
 class Character(object):
     POINTS_TO_DISTRIBUTE = 6
     HEART_POINT_MULTIPLIER = 5
-    CRIT_POINT_MULTIPLIER = 3
+    CRIT_POINT_MULTIPLIER = 6
 
-    START_HEART = 15
+    START_HEART = 20
     START_BAM = 1
     START_EVADE = 1
-    START_CRIT = 3
+    START_CRIT = 6
 
     def __init__(self, name, heart, bam, evade, crit):
         self.name = name
@@ -133,32 +133,24 @@ class BattleRecord(object):
             yield character
 
     def print_records(self):
-        records = self._character_records.values()
+        character_records = self._character_records.values()
 
-        for record in ("kills", "deaths", "total_crits", "total_crit_damage",
-                       "total_damage", "total_misses", "wins"):
+        for score in ("kills", "deaths", "total_crits", "total_crit_damage",
+                      "total_damage", "total_misses", "wins"):
 
-            character = max(records, key=attrgetter(record)).name
+            character_records.sort(key=lambda c: getattr(c, score), reverse=True)
 
-            print("Most %s: %s" % (record, character))
+            print("%s:" % score)
 
-        print()
+            for character_record in character_records:
+                print("  * %s: %d" % (character_record.name, getattr(character_record, score)))
 
-        for character_record in self._character_records.values():
-            print(character_record.name)
-            print("Total Crits: %d" % character_record.total_crits)
-            print("Total Crit Damage: %d" % character_record.total_crit_damage)
-            print("Total Damage: %d" % character_record.total_damage)
-            print("Total Misses: %d" % character_record.total_misses)
-            print("Total Wins: %d" % character_record.wins)
-            print("Total Deaths: %d" % character_record.deaths)
-            print("Kills: %d" % character_record.kills)
             print()
 
 
 class Battle(object):
     # could be [6]
-    CRIT_ON = [5, 6]
+    CRIT_ON = [6]
     EVADE_ON = [6]
 
     # could be 0
@@ -243,7 +235,7 @@ if __name__ == "__main__":
     all_bam = Character.from_points("all bam", into_bam=6)
     all_evade = Character.from_points("all evade", into_evade=6)
     all_heart = Character.from_points("all heart", into_heart=6)
-    battle = Battle(well_rounded, all_crits, all_bam, all_evade)
+    battle = Battle(well_rounded, all_crits, all_bam, all_evade, all_heart)
 
     while True:
 
