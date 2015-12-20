@@ -6,12 +6,12 @@ from operator import attrgetter
 class Character(object):
     POINTS_TO_DISTRIBUTE = 6
     HEART_POINT_MULTIPLIER = 5
-    CRIT_POINT_MULTIPLIER = 4
+    CRIT_POINT_MULTIPLIER = 3
 
-    START_HEART = 20
+    START_HEART = 15
     START_BAM = 1
     START_EVADE = 1
-    START_CRIT = 4
+    START_CRIT = 3
 
     def __init__(self, name, heart, bam, evade, crit):
         self.name = name
@@ -136,7 +136,7 @@ class BattleRecord(object):
         records = self._character_records.values()
 
         for record in ("kills", "deaths", "total_crits", "total_crit_damage",
-                       "total_damage", "total_misses"):
+                       "total_damage", "total_misses", "wins"):
 
             character = max(records, key=attrgetter(record)).name
 
