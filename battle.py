@@ -3,6 +3,9 @@ import random
 
 class Character(object):
     POINTS_TO_DISTRIBUTE = 6
+    HEART_POINT_MULTIPLIER = 5
+    CRIT_POINT_MULTIPLIER = 4
+
     START_HEART = 20
     START_BAM = 1
     START_EVADE = 1
@@ -26,7 +29,7 @@ class Character(object):
         crit = cls.START_CRIT
 
         if into_heart:
-            heart += 5 * into_heart
+            heart += cls.HEART_POINT_MULTIPLIER * into_heart
 
         if into_bam:
             bam += into_bam
@@ -35,7 +38,7 @@ class Character(object):
             evade += into_evade
 
         if into_crit:
-            crit += 3 * into_crit
+            crit += cls.CRIT_POINT_MULTIPLIER * into_crit
 
         return Character(name, heart, bam, evade, crit)
 
