@@ -44,12 +44,9 @@ class Character(object):
 
         while True:
 
-            try:
-                name = input("Enter a name:\n> ")
-                
-                assert len(name) > 0
+            name = input("Enter a name:\n> ")
 
-            except AssertionError:
+            if len(name) == 0:
                 print("Must be at least one character long")
 
                 continue
@@ -129,6 +126,19 @@ class BattleRecord(object):
         for character in self._character_records.values():
 
             yield character
+
+    def print_records(self):
+
+        for character_record in self._character_records.values():
+            print(character_record.name)
+            print("Total Crits: %d" % character_record.total_crits)
+            print("Total Crit Damage: %d" % character_record.total_crit_damage)
+            print("Total Damage: %d" % character_record.total_damage)
+            print("Total Misses: %d" % character_record.total_misses)
+            print("Total Wins: %d" % character_record.wins)
+            print("Total Deaths: %d" % character_record.deaths)
+            print("Kills: %d" % character_record.kills)
+            print()
 
 
 class Battle(object):
@@ -236,9 +246,4 @@ if __name__ == "__main__":
         battle.run()
 
     # yield the stats
-    records = battle.records
-
-    for character_record in records:
-        print(character_record.name)
-        print("Kills: %d" % character_record.kills)
-        print()
+    battle.records.print_records()
