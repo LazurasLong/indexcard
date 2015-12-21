@@ -23,11 +23,11 @@ to distribute; point adds 4 to `CRIT` and 5 to `HEARTS`.
 
   1. Player with highest EVADE rolls first
 
-    * Roll 6 or 5: +`CRIT` `BAM` bonus, skip step 2
+    * Roll 6: +`CRIT` `BAM` bonus
     * Roll 1: miss, skip to step 4
 
   2. Defender rolls for every point in `EVADE`; if
-     roll 6 or 5, skip step 3
+     roll 6, skip step 3
   3. Defender loses `HEARTS` equal to attacker's
      `BAM` plus possible bonuses
   4. Start at step #1, but rotate players
@@ -76,22 +76,27 @@ Option may trigger `EVENTS`:
   * `BATTLE`: Battle monster on back of path card
   * `NEXTCARD`: select new path card
 
-# Weird Happenings
+# Shoutouts
 
-If you notice everyone's HP is the same, point it out
-and everyone else takes `ROLL` damage.
+If you notice any of the conditions being met, exclaim
+"shoutout!" and name the condition satisfied (and reap
+your reward!):
 
-If you roll two-of-a-kind when evading, recover the matched
-number in `HEART`.
-
-If you can guess the roll before using an item, you don't
-dispose the item after use.
+  * You roll two-of-a-kind when evading. Recover matched
+    number in `HEART`.
+  * You guessed your roll correctly before an attack. The
+    defending player must roll their turn with one finger.
+  * You guessed your roll correctly before using an item. You
+    do not dispose the item after this use.
+  * Everyone's HP is the same. Everyone else takes `ROLL` damage.
 
 # Path Card: Sleeping Ugly (Front)
 
-You are in a room with a slumbering troll, a locked door, and a treasure chest.
+You are in a room with a slumbering troll,
+a locked door, and a treasure chest.
 
-To get to the chest, you must either tip-toe around the troll or fight it.
+To get to the chest, you must either
+tip-toe around the troll or fight it.
 
 - Sneak around Troll and `OPEN` the chest (`CHECK evade 14 FAIL BATTLE`)
 - `BATTLE` the Troll and `OPEN` the chest

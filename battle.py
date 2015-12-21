@@ -4,14 +4,14 @@ from operator import attrgetter
 
 
 class Character(object):
-    POINTS_TO_DISTRIBUTE = 4
-    HEART_POINT_MULTIPLIER = 1
-    CRIT_POINT_MULTIPLIER = 5
+    POINTS_TO_DISTRIBUTE = 6
+    HEART_POINT_MULTIPLIER = 5
+    CRIT_POINT_MULTIPLIER = 4
 
-    START_HEART = 5
+    START_HEART = 20
     START_BAM = 1
     START_EVADE = 1
-    START_CRIT = 1
+    START_CRIT = 4
 
     def __init__(self, name, heart, bam, evade, crit):
         self.name = name
@@ -25,6 +25,8 @@ class Character(object):
     def from_points(cls, name, into_heart=0, into_bam=0,
                     into_evade=0, into_crit=0):
 
+        # need to total points coming in to make sure
+        # it doesn't exceed the points to distrib constant
         heart = cls.START_HEART
         bam = cls.START_BAM
         evade = cls.START_EVADE
@@ -119,6 +121,9 @@ class BattleRecord(object):
         self.battle = battle
         self._character_records = {}
 
+        # the non-character-specific battle stats
+        self.average_turns_to_win = 0.0
+
         for character in battle.all_characters:
             self._character_records[character.name] = CharacterRecord(character.name)
 
@@ -150,7 +155,7 @@ class BattleRecord(object):
 
 class Battle(object):
     # could be [6]
-    CRIT_ON = [5, 6]
+    CRIT_ON = [6]
     EVADE_ON = [6]
 
     # could be 0
@@ -177,6 +182,8 @@ class Battle(object):
     def run(self):
         """Do the battle simulation!!!!!"""
 
+        turns_it_took_to_win = 0
+
         while len(self.alive_characters) > 1:
 
             for character in self.alive_characters:
@@ -190,15 +197,18 @@ class Battle(object):
 
                 total_damage = character.bam
 
+                # this remains False UNLESS it's set to True when critting
+                # <if CRITS_SKIP_EVADE> is True
                 skip_evade_roll = False
 
                 if roll in self.CRIT_ON:
                     # need to increase player's crit record
                     # here...
                     total_damage += character.crit
+                    skip_evade_roll = self.CRITS_SKIP_EVADE
+                    # could be wrong as it could be evaded
                     character_record.total_crits += 1
                     character_record.total_crit_damage += total_damage
-                    skip_evade_roll = self.CRITS_SKIP_EVADE
 
                 elif roll in self.MISS_ON:
                     # record miss
@@ -206,12 +216,25 @@ class Battle(object):
 
                     continue
 
-                if not skip_evade_roll:
-                    target_evade_roll = random.randint(1, 6)
+                # this will be false unless crit said otherwise
+                target_evades_damage = False
 
-                    if target_evade_roll in self.EVADE_ON:
-                        target_record.total_evades += 1
-                        character_record.total_misses += 1
+                if not skip_evade_roll:
+
+                    # anytime anyone rolls and it's in evade_on
+                    # it's evaded, rather than rerolling for every evade
+                    for evade_chance in xrange(target.evade):
+                        target_evade_roll = random.randint(1, 6)
+
+                        if target_evade_roll in self.EVADE_ON:
+                            target_record.total_evades += 1
+                            character_record.total_misses += 1
+
+                            target_evades_damage = True
+
+                            break
+
+                    if target_evades_damage:
 
                         continue
 
@@ -225,19 +248,24 @@ class Battle(object):
                     target_record.deaths += 1
                     target.heart = target._heart
 
+            turns_it_took_to_win += 1
+
         character_record.wins += 1
+
+        turns_it_took_to_win = float(turns_it_took_to_win)
+        battle.records.average_turns_to_win = float((battle.records.average_turns_to_win
+                                                     + turns_it_took_to_win) / 2.0)
         battle.reset()
 
 
 if __name__ == "__main__":
-    well_rounded = Character.from_points("well rounded",
-                                         into_heart=1, into_bam=1,
-                                         into_evade=1, into_crit=1)
-    all_crits = Character.from_points("all crits", into_crit=4)
-    all_bam = Character.from_points("all bam", into_bam=4)
-    all_evade = Character.from_points("all evade", into_evade=4)
-    all_heart = Character.from_points("all heart", into_heart=4)
-    battle = Battle(well_rounded, all_crits, all_bam, all_evade, all_heart)
+    barb = Character.from_points("barb", into_heart=3, into_bam=3)
+    rogue = Character.from_points("rogue", into_evade=3, into_crit=3)
+    pure_crit = Character.from_points("pure_crit", into_crit=6)
+    pure_bam = Character.from_points("pure_bam", into_bam=6)
+    pure_evade = Character.from_points("pure_evade", into_evade=6)
+    pure_heart = Character.from_points("pure_heart", into_heart=6)
+    battle = Battle(barb, rogue, pure_crit, pure_bam, pure_evade, pure_heart)
 
     while True:
 
@@ -256,3 +284,4 @@ if __name__ == "__main__":
 
     # yield the stats
     battle.records.print_records()
+    print(battle.records.average_turns_to_win)
