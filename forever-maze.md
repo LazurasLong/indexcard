@@ -29,7 +29,6 @@ Slime `BATTLE`:
   * `BAM`: 1
   * `EVADE`: 7
   * `CRIT`: 4
-  * Drops: CANDY
 
 Slime `TALK`:
 
@@ -45,53 +44,3 @@ Treasure:
   4. THROWING STARS
   5. CANDY
   6. SODA
-
-# Sleeping Ugly (Front)
-
-You are in a room with a slumbering troll,
-a locked door, and a treasure chest.
-
-To get to the chest, you must either
-tip-toe around the troll or fight it.
-
-  - Sneak around Troll and `OPEN` the chest
-    (`CHECK evade 14 FAIL BATTLE`)
-  - `BATTLE` the Troll and `OPEN` the chest
-  - Go to door and `USE key` (`NEXTCARD`)
-
-# Sleeping Ugly (Back)
-
-Battle: Troll
-
-  - H: 16 (48)
-  - B: 14
-  - E: 1
-  - C: 4 (8)
-  - Drops: key
-
-Treasure Chest
-
-  1. KEY
-  2. TOKEN
-  3. MOLOTOV
-  4. THROWING STARS
-  5. CANDY
-  6. SODA
-
-# Monk Up Your Mind (Front)
-
-You come across a meditating monk sitting in front of two doors.
-
-  - "Philosophical banter here" CHECK STAT HEARTS 17 FAIL GAME OVER
-  - BATTLE MONK
-  - LEFT DOOR
-  - RIGHT DOOR
-
-# Monk Up Your Mind (Back)
-
-Battle: MONK
-
-  - H: 20
-  - B: 5
-  - E: 24
-  - C: 12
