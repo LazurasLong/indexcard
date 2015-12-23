@@ -37,26 +37,21 @@ Creating supplemental rulesets:
 
   * Fits on index card (5x3 inches)
   * List required supplements on top, e.g.,
-    `REQUIRED: Usable Items`
+    `REQUIRED: Fruit`
 
-# Usable Items
+# Fruit
 
-Must announce which item used before rolling.
+Must announce which fruit you'll consume before rolling. You
+may attack after eating a fruit.
 
-Players can use an item before they attack.
+Characters start with one fruit:
 
-Characters start with one item:
-
-  * CANDY: restore `ROLL` `HEART`, if roll
-    1 or 2 restore full health.
-  * SODA: +ROLL BAM bonus, unevadeable
-
-Items for co-op only:
-
-  * TOKEN: acts as a roll of 6; can attack
-  * MOLOTOV: Damage is 2x roll; unevadable
-  * THROWING STARS: Roll thrice, the total
-    is unevadable damage.
+  * CHERRY: restore `ROLL` `HEART`, if roll
+    1 restore full health
+  * COCONUT: +ROLL BAM bonus
+  * BANANA: Attack becomes unevadeable
+  * GRAPES: Next `ROLL` of is 6
+  * ORANGE: Deal `ROLL` x2 damage
 
 # Tag Teams
 
@@ -69,20 +64,19 @@ Items for co-op only:
 
 `REQUIRES: Usable Items`
 
-
 Characters now have `TALK` stat which starts at 1. Path cards
 have a scenario and options which trigger `EVENTS`.
 
 Options may have `REQUIREMENTS`:
 
   * `USE`: Must have item. Remove item.
-  * `HAS stat x`: `stat` + `roll` must be at least `x`
+  * `stat x`: `stat` + `roll` must be at least `x`
 
 Option may trigger `EVENTS`:
 
   * `TALK`: Choose an option from dialog on back of path card. Some
-    options require a minimum sum from `ROLL` & `TALK`, failure
-    disables the item.
+    options have a `stat x` check, i.e., `TALK x`, failing disables
+    the item.
   * `GET`: All players get item
   * `OPEN`: Get item #ROLL from chest on back of path card
   * `BATTLE`: Battle monster on back of path card
@@ -101,3 +95,12 @@ your reward!):
   * You guessed your roll correctly before using an item. You
     do not dispose the item after this use.
   * Everyone's HP is the same. Everyone else takes `ROLL` damage.
+
+# That Rogue is a Jerk
+
+If an `EVADE` roll has three-of-a-kind, everyone else must
+turn around. The person who rolled may make one change to
+anyone's stat, including themselves, they announce that
+everyone must turn around. Everyone gets one chance to
+guess what changed. If none of the guesses are correct,
+the change is left in effect.

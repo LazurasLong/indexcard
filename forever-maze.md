@@ -1,47 +1,47 @@
 # Soggy Room (Front)
 
-Dark damp square cement shelter. A pipe protrudes
-perpendicular to wall. Wall-pipe-droplets drip down,
-sheening the floor with cold mildew water. A large
-pipe rim shyly pokes above the water sheen, modestly
-presenting a locked grating. A door slumps from its
-frame, bleeding light arounds its edges.
+A dark, damp stone room, cluttered with stone debris. A sheen
+of murky water gently ripples, the flush rim of a large pipe
+presents a locked grating, behind it hay nests something
+bundled in a dingy white cloth. A door slumps from its frame,
+bleeding light around its edges.
 
-The sheen quivers, bunches toward the center,
-and jellifies. The slime is forcing a
-`BATTLE`!
+The water quivers, and jellifies as it gathers at the center,
+poorly depicting a woman. She sticks out her lop-sided, drooping
+tongue and throws some of herself--it burns (`BATTLE`)!
 
-The slime waters down to the floor, returning
-to its former state. Options:
+She spells out "Sorry!" with herself before watering down,
+resheening the floor. Options:
 
-  * `TALK` to the slime
+  * `TALK` to the water
   * Go through the door
     (`NEXT CARD`)
-  * To `OPEN` the locked pipe and reveal its
-    treasures, either pick the lock (`HAS EVADE 10`),
-    or `USE` a key
+  * To `OPEN` the locked pipe either pick the lock
+    (`EVADE 10`) or `USE` a key.
 
 # Soggy Room (Back)
 
-Slime `BATTLE`:
+Slime woman `BATTLE`:
 
   * `HEART`: 20
   * `BAM`: 1
-  * `EVADE`: 7
-  * `CRIT`: 4
+  * `EVADE`: 6
+  * `CRIT`: 8
 
-Slime `TALK`:
+Slime woman `TALK`:
 
-  * `TALK 10`: The slime responds to your
-    empathy with an apologetic jelly hug.
-    `GET CANDY`
-  * Ripples spread across the water.
+  * `TALK 8`: The water swirls excitedly,
+    all `HEART` is restored!
+  * `TALK 5`: A key flows to you from a
+    dark, dingy corner, behind rubble.
+    `GET` key.
+  * The water ripples affectionately
 
-Treasure:
+Dingy white cloth (`OPEN`):
 
   1. KEY
-  2. TOKEN
-  3. MOLOTOV
-  4. THROWING STARS
-  5. CANDY
-  6. SODA
+  2. CHERRY
+  3. COCONUT
+  4. BANANA
+  5. GRAPES
+  6. ORANGE
