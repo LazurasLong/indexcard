@@ -58,12 +58,20 @@ Items for co-op only:
   * THROWING STARS: Roll thrice, the total
     is unevadable damage.
 
+# Tag Teams
+
+  * Each player creates two characters, instead of one
+  * Switching characters takes a turn
+  * When a character dies, its tag team takes its place,
+    same round
+
 # Path Cards
 
 `REQUIRES: Usable Items`
 
-Path cards have a scenario and options that either trigger
-`EVENTS` or lead to another (possibly random) path card.
+
+Characters now have `TALK` stat which starts at 1. Path cards
+have a scenario and options which trigger `EVENTS`.
 
 Options may have `REQUIREMENTS`:
 
@@ -72,9 +80,9 @@ Options may have `REQUIREMENTS`:
 
 Option may trigger `EVENTS`:
 
-  * `TALK`: Talk dialog on back of path card. Each item
-    has an associated `HAS stat x`
-    dialog result comes ba
+  * `TALK`: Choose an option from dialog on back of path card. Some
+    options require a minimum sum from `ROLL` & `TALK`, failure
+    disables the item.
   * `GET`: All players get item
   * `OPEN`: Get item #ROLL from chest on back of path card
   * `BATTLE`: Battle monster on back of path card

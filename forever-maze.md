@@ -32,8 +32,9 @@ Slime `BATTLE`:
 
 Slime `TALK`:
 
-  * `HAS HEART 10`: The slime responds to your
+  * `TALK 10`: The slime responds to your
     empathy with an apologetic jelly hug.
+    `GET CANDY`
   * Ripples spread across the water.
 
 Treasure:
