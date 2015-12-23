@@ -36,7 +36,8 @@ Follow the install guide for your system:
 
   * Install: http://pandoc.org/installing.html
 
-Command to build:
+You can use the `topdf.sh` script to generate the PDFs from the
+Markdown source, which basically does this command:
 
 ```
 pandoc --latex-engine=xelatex --template=./pandoc-template.tex \
