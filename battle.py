@@ -259,13 +259,11 @@ class Battle(object):
 
 
 if __name__ == "__main__":
-    barb = Character.from_points("barb", into_heart=3, into_bam=3)
-    rogue = Character.from_points("rogue", into_evade=3, into_crit=3)
-    pure_crit = Character.from_points("pure_crit", into_crit=6)
-    pure_bam = Character.from_points("pure_bam", into_bam=6)
-    pure_evade = Character.from_points("pure_evade", into_evade=6)
-    pure_heart = Character.from_points("pure_heart", into_heart=6)
-    battle = Battle(barb, rogue, pure_crit, pure_bam, pure_evade, pure_heart)
+    not_crit = Character.from_points("not crit", into_heart=2, into_bam=2, into_evade=2)
+    not_evade = Character.from_points("not evade", into_heart=2, into_bam=2, into_crit=2)
+    not_bam = Character.from_points("not bam", into_heart=2, into_evade=2, into_crit=2)
+    not_hearts = Character.from_points("not hearts", into_bam=2, into_evade=2, into_crit=2)
+    battle = Battle(not_crit, not_evade, not_bam, not_hearts)
 
     while True:
 

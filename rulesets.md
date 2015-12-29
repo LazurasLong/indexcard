@@ -95,12 +95,3 @@ your reward!):
   * You guessed your roll correctly before using an item. You
     do not dispose the item after this use.
   * Everyone's HP is the same. Everyone else takes `ROLL` damage.
-
-# That Rogue is a Jerk
-
-If an `EVADE` roll has three-of-a-kind, everyone else must
-turn around. The person who rolled may make one change to
-anyone's stat, including themselves, they announce that
-everyone must turn around. Everyone gets one chance to
-guess what changed. If none of the guesses are correct,
-the change is left in effect.
