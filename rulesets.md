@@ -18,7 +18,7 @@ software engineer.
 Start with: 20 `HEALTH`, 1 `FORCE`, 2 `ACTION`, and 4 points
 to distribute; point adds 5 to `HEARTS`. Choose 2 abilities.
 
-Turns ordered by `ACTION`. Parry regains `ACTION`, take two less
+Turns ordered by `ACTION`. Parry regains 1 `ACTION`, take two less
 damage per hit this round. Flee if you can roll a 5 or 6. Ability
 uses 1 `ACTION`. Hit deals `FORCE` damage, +3 on roll 6, miss on 1.
 Ability effects stay in play until/unless target rolls 1 or 6:
