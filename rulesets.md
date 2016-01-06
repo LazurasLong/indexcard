@@ -26,4 +26,4 @@ Ability effects stay in play until/unless target rolls 1 or 6:
   * Curse: miss
   * Poison: lose 1 `HEALTH`
   * Heal: recover 1 `HEALTH`
-  * Buff: +1 `FORCE`
+  * Buff: +2 `FORCE`
