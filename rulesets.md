@@ -34,4 +34,4 @@ Traits:
 
   * *Resourceful*: Restore 1 `ACTION` when you roll a 1 or 6
   * *Durable*: Take only 1 damage when parrying. +15 to `HEALTH`.
-  * *Caustic*: If roll 6 or 5 when hitting, add 2 to damage
+  * *Caustic*: If roll 6 or 5 when hitting, add 3 to damage
