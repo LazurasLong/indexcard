@@ -17,21 +17,21 @@ software engineer.
 
 # Battle Ruleset
 
-Start with: 20 `HEALTH`, 2 `FORCE`, 2 `ACTION`, and 4 points
+Start with: 20 `HEALTH`, 1 `FORCE`, 1 `ACTION`, and 4 points
 to distribute; point adds 5 to `HEALTH`. Choose 1 ability and 1
 trait.
 
-Turns ordered by `ACTION`. Parry regains 1 `ACTION`, take two less
-damage per hit this round. Flee if you can roll a 5 or 6. Ability
-uses 1 `ACTION`. Hit deals `FORCE` damage, +2 on 6, miss on 1.
-Abilities affect target until/unless they roll 1 or 6:
+Turns clockwise, player with highest `ACTION` first. Must
+call move and target first. Rest regains 1 `ACTION`. Ability
+uses 1 `ACTION`. Hit deals `FORCE` damage, miss on 1, 2. Abilities:
 
-  * Poison: lose 1 `HEALTH`
-  * Heal: recover 1 `HEALTH`
-  * Buff: +2 `FORCE`
+  * Heal: recover `FORCE` + roll `HEALTH`
+  * Rolling Hit: deal `FORCE` + roll damage, doesn't miss
+  * Poof: nullify damage if roll 5 or 6
 
 Traits:
 
-  * *Resourceful*: Restore 1 `ACTION` when you roll a 1 or 6
-  * *Durable*: Take only 1 damage when parrying. +15 to `HEALTH`.
-  * *Caustic*: If roll 6 or 5 when hitting, add 3 to damage
+  * *Resourceful*: Restore all `ACTION` when resting
+  * *Durable*: Take only 1 damage when resting
+  * *Critical*: If roll 6 or 5 when hitting, add roll to damage
+  * *Accurate*: Never miss
