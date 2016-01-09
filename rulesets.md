@@ -1,4 +1,6 @@
-# IndexCard Tabletop RPG
+# About IndexCard
+
+About IndexCard tabletop RPG.
 
 Guiding Principles:
 
