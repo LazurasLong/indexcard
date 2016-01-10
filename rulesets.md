@@ -1,8 +1,6 @@
 # About IndexCard
 
-About IndexCard tabletop RPG.
-
-Guiding Principles:
+About IndexCard tabletop RPG. Guiding principles:
 
   * Fast gameplay
   * Playable with 1D6, paper, writing utensil
@@ -20,7 +18,7 @@ software engineer.
 # Battle Ruleset
 
 Start with: 20 `HEALTH`, 1 `FORCE`, 1 `ACTION`, and 4 points
-to distribute; each point adds 5 to `HEALTH`. Choose 1 ability
+to distribute; each point adds 10 to `HEALTH`. Choose 1 ability
 and 1 trait.
 
 Player with highest `ACTION` is first, go clockwise. Call move
@@ -36,3 +34,5 @@ Traits:
   * *Durable*: Take only 1 damage when resting
   * *Critical*: If roll 6 or 5 when hitting, add that roll to damage
   * *Failsafe*: Moves never fail
+
+# Adventure Ruleset
